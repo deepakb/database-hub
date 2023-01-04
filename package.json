@@ -1,0 +1,27 @@
+{
+  "name": "database-hub",
+  "version": "1.0.0",
+  "description": "Connect to multiple types of databases including MySQL, PostgreSQL, MongoDB, CosmosDB, and Couchbase with a single, easy-to-use interface.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepakb/database-hub.git"
+  },
+  "keywords": [
+    "MySQL",
+    "PostgreSQL",
+    "MongoDB",
+    "CosmosDB",
+    "Couchbase",
+    "Nodejs"
+  ],
+  "author": "Deepak Biswal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deepakb/database-hub/issues"
+  },
+  "homepage": "https://github.com/deepakb/database-hub#readme"
+}
