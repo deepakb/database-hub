@@ -1,15 +1,12 @@
 import { Client } from 'pg';
 import { ConnectionOptions } from './types';
 
-export const postgres = (options: ConnectionOptions) => {
-  return new Promise((resolve, reject) => {
+export const postgres = async (options: ConnectionOptions) => {
+  try {
     const client = new Client(options);
-    client.connect((error) => {
-      if (error) {
-        reject(error);
-      } else {
-        resolve(client);
-      }
-    });
-  });
+    await client.connect();
+    return client;
+  } catch (error) {
+    throw error;
+  }
 };

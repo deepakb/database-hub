@@ -1,15 +1,12 @@
 import * as ms from 'mysql2';
 import { ConnectionOptions } from './types';
 
-export const mysql = (options: ConnectionOptions) => {
-  return new Promise((resolve, reject) => {
+export const mysql = async (options: ConnectionOptions) => {
+  try {
     const client = ms.createConnection(options);
-    client.connect((error) => {
-      if (error) {
-        reject(error);
-      } else {
-        resolve(client);
-      }
-    });
-  });
+    await client.connect();
+    return client;
+  } catch (error) {
+    throw error;
+  }
 };

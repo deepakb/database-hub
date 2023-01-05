@@ -1,13 +1,12 @@
 import { CosmosClient } from '@azure/cosmos';
 import { ConnectionOptions } from './types';
 
-export const cosmos = (options: ConnectionOptions) => {
-  return new Promise((resolve, reject) => {
+export const cosmos = async (options: ConnectionOptions) => {
+  try {
     const client = new CosmosClient(options);
-    client.databases.createIfNotExists({ id: options.databaseId }).then(() => {
-      resolve(client);
-    }).catch((error) => {
-      reject(error);
-    });
-  });
+    await client.databases.createIfNotExists({ id: options.databaseId });
+    return client;
+  } catch (error) {
+    throw error;
+  }
 };

@@ -1,7 +1,6 @@
 export interface ConnectionOptions {
-    host: string;
-    user: string;
-    password: string;
-    database: string;
-  }
-  
+  host: string;
+  user: string;
+  password: string;
+  database: string;
+}

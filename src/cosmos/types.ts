@@ -1,6 +1,5 @@
 export interface ConnectionOptions {
-    endpoint: string;
-    key: string;
-    databaseId: string;
-  }
-  
+  endpoint: string;
+  key: string;
+  databaseId: string;
+}

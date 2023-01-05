@@ -1,4 +1,3 @@
 export interface ConnectionOptions {
-    url: string;
-  }
-  
+  url: string;
+}
